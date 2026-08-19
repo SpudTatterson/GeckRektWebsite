@@ -150,6 +150,11 @@
 
     <footer>
       <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>GECK REKT</span></span>
+      <nav class="social-links" aria-label="GECK REKT social media">
+        <a href="https://www.youtube.com/channel/UCPJS0GMOVrqZIx4tWHwcVLQ" target="_blank" rel="me noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/geckrekt/" target="_blank" rel="me noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@geck.rekt" target="_blank" rel="me noopener noreferrer">TikTok</a>
+      </nav>
       <p>© {{ currentYear }} GECK REKT. All rights reserved.</p>
     </footer>
   </div>
@@ -337,6 +342,9 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .form-note.error { opacity: 1; color: #fff; }
 
 footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
+.social-links { gap: 22px; }
+.social-links a { color: fade(@textColor, 72%); text-underline-offset: 5px; transition: color .15s ease; }
+.social-links a:hover, .social-links a:focus-visible { color: @accentColor; }
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
