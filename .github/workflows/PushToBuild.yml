@@ -1,0 +1,64 @@
+name: Build and Deploy to Build Branch
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Node 22.11.0
+        run: |
+          curl -fsSL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz -o node.tar.xz
+          mkdir -p ~/node22
+          tar -xf node.tar.xz -C ~/node22 --strip-components=1
+          echo "/home/runner/node22/bin" >> $GITHUB_PATH
+
+      - name: Verify Node version
+        run: node --version
+
+      - name: Upgrade to npm 10.9.0
+        run: npm install -g npm@10.9.0
+
+      - name: Verify npm version
+        run: npm --version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy dist to Build branch (docs folder)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout Build
+
+          # Remove existing docs folder
+          rm -rf docs
+          mkdir docs
+
+          # Copy new build output to docs folder
+          cp -R dist/* docs/
+
+          # Add CNAME file
+          echo "geckrekt.com" > docs/CNAME
+
+          # Commit changes
+          git add docs
+          git commit -m "chore: update docs from latest dist build [skip ci]" || echo "No changes to commit"
+
+          # Push to Build branch
+          git push origin Build
