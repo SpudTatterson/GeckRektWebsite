@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geckrekt.com/sitemap.xml
