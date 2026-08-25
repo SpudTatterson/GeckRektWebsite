@@ -14,5 +14,3 @@ npm run serve
 ```sh
 npm run build
 ```
-
-The canonical domain and absolute social-sharing URL can be added once the domain is purchased.
