@@ -151,9 +151,9 @@
     <footer>
       <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>GECK REKT</span></span>
       <nav class="social-links" aria-label="GECK REKT social media">
-        <a href="https://www.youtube.com/channel/UCPJS0GMOVrqZIx4tWHwcVLQ" target="_blank" rel="me noopener noreferrer" aria-label="GECK REKT on YouTube"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
-        <a href="https://www.instagram.com/geckrekt/" target="_blank" rel="me noopener noreferrer" aria-label="GECK REKT on Instagram"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
-        <a href="https://www.tiktok.com/@geck.rekt" target="_blank" rel="me noopener noreferrer" aria-label="GECK REKT on TikTok"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
+        <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on YouTube"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
+        <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Instagram"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
+        <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on TikTok"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
       </nav>
       <p>© {{ currentYear }} GECK REKT. All rights reserved.</p>
     </footer>
