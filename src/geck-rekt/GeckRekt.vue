@@ -35,9 +35,20 @@
         </div>
 
         <div class="hero-art">
-          <img src="/geck-rekt/Voting_Stage.png" alt="Players choosing between two match modifiers on the voting stage">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="/geck-rekt/Voting_Stage.png"
+            aria-label="GECK REKT gameplay featuring a one-hit kill"
+            :class="{ 'focus-bottom': heroVideoFocusBottom }"
+            @timeupdate="updateHeroVideoFocus"
+          >
+            <source src="/geck-rekt/Kill.mp4" type="video/mp4">
+          </video>
           <span class="sticker" aria-hidden="true">IN<br>DEV</span>
-          <span class="image-tag">PLAYER-VOTED MODIFIERS</span>
+          <span class="image-tag">ONE HIT. ONE KILL.</span>
         </div>
       </section>
 
@@ -170,11 +181,16 @@ export default Vue.extend({
       currentYear: new Date().getFullYear(),
       email: '',
       selectedInterests: [] as string[],
+      heroVideoFocusBottom: false,
       formState: '',
       formMessage: 'Double opt-in. Unsubscribe or update your preferences any time.'
     }
   },
   methods: {
+    updateHeroVideoFocus(event: Event) {
+      const video = event.currentTarget as HTMLVideoElement
+      this.heroVideoFocusBottom = video.duration > 0 && video.currentTime >= video.duration * 0.2
+    },
     validateSignup(event: Event) {
       if (this.selectedInterests.length === 0) {
         event.preventDefault()
@@ -278,7 +294,10 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .text-link { font-size: .7rem; font-weight: 750; text-transform: uppercase; text-underline-offset: 6px; }
 
 .hero-art { width: 46vw; max-width: 620px; aspect-ratio: 16 / 10; position: relative; justify-self: end; transform: rotate(3.5deg); box-shadow: 14px 16px 0 @bodyBgColor; }
-.hero-art > img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hero-art > img,
+.hero-art > video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hero-art > video { object-position: center center; transition: object-position 1s ease; }
+.hero-art > video.focus-bottom { object-position: center bottom; }
 .hero-art::after { content: ''; position: absolute; inset: 0; border: 2px solid fade(@textColor, 16%); pointer-events: none; }
 .sticker { position: absolute; right: -1%; top: 9%; width: 78px; height: 78px; border-radius: 50%; display: grid; place-items: center; background: @textColor; color: @contentBgColor; text-align: center; font-weight: 900; line-height: .9; transform: rotate(10deg); }
 .image-tag { position: absolute; left: 14px; bottom: 14px; padding: 7px 10px; background: @contentBgColor; color: @textColor; font-size: .58rem; font-weight: 800; letter-spacing: .1em; }
