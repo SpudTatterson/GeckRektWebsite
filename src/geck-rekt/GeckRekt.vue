@@ -162,9 +162,9 @@
     <footer>
       <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>GECK REKT</span></span>
       <nav class="social-links" aria-label="GECK REKT social media">
-        <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on YouTube"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
-        <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Instagram"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
-        <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on TikTok"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
+        <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on YouTube" @click="trackSocial('youtube')"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
+        <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Instagram" @click="trackSocial('instagram')"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
+        <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on TikTok" @click="trackSocial('tiktok')"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
       </nav>
       <p>© {{ currentYear }} GECK REKT. All rights reserved.</p>
     </footer>
@@ -201,6 +201,10 @@ export default Vue.extend({
 
       this.formState = 'success'
       this.formMessage = 'Confirmation opened in a new tab. Check your inbox next to complete your subscription.'
+    },
+    trackSocial(network: string) {
+      const analytics = (window as any).gtag
+      if (analytics) analytics('event', 'social_click', { network, location: 'footer' })
     }
   }
 })
@@ -392,6 +396,9 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
   .media-card { margin-bottom: 34px; }
   .signup fieldset { grid-template-columns: 1fr; }
   footer { padding: 34px 0; flex-direction: column; gap: 14px; text-align: center; }
+  footer .social-links { display: flex; order: 2; }
+  footer > p { order: 3; }
+  footer .wordmark { order: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
