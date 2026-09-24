@@ -1,14 +1,251 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0;url=https://geckrekt.com/#updates">
-  <title>Join the GECK REKT mailing list</title>
-  <script>window.location.replace('https://geckrekt.com/#updates')</script>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#131713">
+    <meta name="description" content="Find GECK REKT everywhere and join the mailing list.">
+    <link rel="icon" href="/geck-rekt/LogoBox.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <title>Join GECK REKT</title>
+    <style>
+        :root {
+            --i: #f6f0d5;
+            --m: #b5b6a7;
+            --b: #131713;
+            --p: #222820;
+            --y: #f4d63d;
+            --r: #dc4b36
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--b);
+            color: var(--i);
+            font: 16px/1.5 Roboto, sans-serif
+        }
+
+        .page {
+            width: min(100% - 24px, 620px);
+            margin: auto;
+            padding: 28px 0
+        }
+
+        header {
+            text-align: center
+        }
+
+        .logo {
+            width: 76px;
+            height: 76px;
+            border-radius: 20px
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            font-family: 'Lilita One';
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: .95
+        }
+
+        h1 {
+            font-size: clamp(3rem, 14vw, 5.5rem)
+        }
+
+        .intro {
+            margin: 14px auto 30px;
+            color: var(--m);
+            max-width: 420px
+        }
+
+        .links {
+            display: grid;
+            gap: 13px
+        }
+
+        .social {
+            min-height: 64px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 18px;
+            border: 1px solid #596052;
+            background: var(--p);
+            color: var(--i);
+            text-decoration: none;
+            box-shadow: 5px 5px 0 var(--r)
+        }
+
+        .social img {
+            width: 25px;
+            height: 25px
+        }
+
+        .social strong,
+        .social span {
+            display: block
+        }
+
+        .social span {
+            color: var(--m);
+            font-size: .78rem
+        }
+
+        .signup {
+            margin-top: 52px;
+            padding: 27px;
+            background: var(--r)
+        }
+
+        .signup h2 {
+            font-size: clamp(2.3rem, 10vw, 3.7rem)
+        }
+
+        .signup p {
+            margin: 10px 0 20px
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em
+        }
+
+        input[type=email] {
+            width: 100%;
+            padding: 15px 0;
+            border: 0;
+            border-bottom: 2px solid var(--i);
+            background: transparent;
+            color: white;
+            font-weight: 700;
+            outline: 0
+        }
+
+        input::placeholder {
+            color: #f6f0d5bf
+        }
+
+        fieldset {
+            margin: 20px 0;
+            padding: 0;
+            border: 0;
+            display: grid;
+            gap: 10px
+        }
+
+        legend {
+            margin-bottom: 6px;
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase
+        }
+
+        .interest {
+            display: flex;
+            gap: 9px;
+            margin: 0;
+            font-size: .85rem;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0
+        }
+
+        .interest input {
+            accent-color: var(--y)
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            background: var(--p);
+            color: white;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        .note {
+            font-size: .7rem;
+            opacity: .8
+        }
+
+        .back {
+            display: block;
+            margin: 30px 0;
+            text-align: center;
+            color: var(--i);
+            font-size: .8rem;
+            font-weight: 700;
+            text-transform: uppercase
+        }
+
+        footer {
+            text-align: center;
+            color: #8e9387;
+            font-size: .7rem
+        }
+
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+            opacity: 0
+        }
+    </style>
+<script defer src="/analytics-consent.js"></script><style>#consent-banner{position:fixed;z-index:20;left:16px;right:16px;bottom:16px;max-width:760px;margin:auto;display:flex;gap:22px;align-items:center;justify-content:space-between;padding:17px 20px;background:#222820;color:#f6f0d5;border:1px solid #596052;box-shadow:5px 5px 0 #dc4b36;font:14px/1.4 Arial,sans-serif}#consent-banner p{margin:4px 0 0;color:#b5b6a7}#consent-banner a{color:#f4d63d}.consent-actions{display:flex;gap:8px;flex-shrink:0}.consent-actions button{padding:10px 12px;border:1px solid #f6f0d5;background:transparent;color:#f6f0d5}.consent-actions .consent-accept{background:#f4d63d;color:#222820;border-color:#f4d63d}@media(max-width:620px){#consent-banner{display:block}.consent-actions{margin-top:12px}.consent-actions button{width:50%}}</style></head>
+
 <body>
-  <p>Opening the <a href="https://geckrekt.com/#updates">GECK REKT mailing list</a>&hellip;</p>
-</body>
+    <main class="page">
+        <header><img class="logo" src="/geck-rekt/LogoBox.png" alt="">
+            <h1>GECK REKT</h1>
+            <p class="intro">One hit. New rules. You decide. Follow along for dev updates, gameplay, and the road to
+                launch.</p>
+        </header>
+        <nav class="links" aria-label="GECK REKT social links"><a class="social" href="/i"><img src="/social/instagram.svg" alt=""><span><strong>Instagram</strong><span>Follow the world of GECK REKT</span></span></a><a class="social" href="/y"><img src="/social/youtube.svg" alt=""><span><strong>YouTube</strong><span>Watch the latest gameplay</span></span></a><a class="social" href="/t"><img src="/social/tiktok.svg" alt=""><span><strong>TikTok</strong><span>Short clips and chaotic moments</span></span></a><a class="social" href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">𝕏</span><span><strong>X</strong><span>Follow GECK REKT on X</span></span></a><a class="social" href="/" rel="home"><span aria-hidden="true">⌂</span><span><strong>Website</strong><span>Visit the main GECK REKT site</span></span></a></nav>
+        <section class="signup">
+            <h2>Stay in the match.</h2>
+            <p>Get only the GECK REKT news you care about.</p>
+            <form method="POST" target="_blank" rel="noopener"
+                action="https://311a400a.sibforms.com/serve/MUIFALXCq7slJlHUIT6HFMwEYF4Dg8HsmkPk0HS0AvCc8IISbt54At0dijzh1bIBxaRemPvz6G2NnRAMX9_Gh3LD6DpHZGXQtB8d7NjlL_gH1q6vXQwLqHQmswPdRJgEn4BAJogZiCCuq6FQxXJjnii1ON9PxdEgd99e2D9hCBOdhwRie7bKw_mBcjvzkW1DQH8oOY9U6ihEtoS4QA==">
+                <label for="email">Email address</label><input id="email" type="email" name="EMAIL"
+                    placeholder="YOUR EMAIL ADDRESS" required>
+                <fieldset>
+                    <legend>Tell me about:</legend><label class="interest"><input type="checkbox" name="lists_28[]"
+                            value="5">Playtests</label><label class="interest"><input type="checkbox" name="lists_28[]"
+                            value="6">Tournaments &amp; events</label><label class="interest"><input type="checkbox"
+                            name="lists_28[]" value="7">Steam page &amp; release</label><label class="interest"><input
+                            type="checkbox" name="lists_28[]" value="8">Development updates</label>
+                </fieldset><input class="honeypot" name="email_address_check" tabindex="-1"><input type="hidden"
+                    name="locale" value="en"><button type="submit">Join the list &rarr;</button>
+                <p class="note">Double opt-in. Unsubscribe or update your preferences any time.</p>
+            </form>
+        </section><a class="back" href="/"> Back to the main site</a>
+        <footer>&copy; 2026 GECK REKT</footer>
+    </main>
+<script>if(new URLSearchParams(location.search).get("source")==="qr"){geckrektAnalytics.event("event","qr_scan",{location:"join"});}</script></body>
+
 </html>
+
+
+
+
+
+
+
+
+
