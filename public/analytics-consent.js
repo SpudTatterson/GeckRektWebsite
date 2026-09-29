@@ -37,7 +37,7 @@
     var link = event.target.closest && event.target.closest('a.social')
     if (!link) return
     var href = link.getAttribute('href') || ''
-    var network = href === '/i' ? 'instagram' : href === '/y' ? 'youtube' : href === '/t' ? 'tiktok' : href.indexOf('x.com') >= 0 ? 'x' : href === '/' ? 'website' : ''
+    var network = href === '/i' ? 'instagram' : href.indexOf('discord.gg') >= 0 ? 'discord' : href === '/y' ? 'youtube' : href === '/t' ? 'tiktok' : href.indexOf('x.com') >= 0 ? 'x' : href === '/' ? 'website' : ''
     if (network) window.geckrektAnalytics.event('event', network === 'website' ? 'website_click' : 'social_click', { network: network, location: 'join' })
   })
   document.addEventListener('submit', function (event) {
