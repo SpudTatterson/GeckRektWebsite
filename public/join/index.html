@@ -104,7 +104,8 @@
 
         .signup {
             margin-top: 52px;
-            padding: 27px;
+            margin-bottom: 10px;
+            padding: 27px 27px 7px;
             background: var(--r)
         }
 
@@ -114,6 +115,35 @@
 
         .signup p {
             margin: 10px 0 20px
+        }
+
+        .discord-widget {
+            margin-top: 28px;
+            padding: 24px;
+            background: var(--p);
+            border: 1px solid #596052;
+        }
+
+        .widget-kicker {
+            margin: 0 0 10px !important;
+            color: var(--y);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .discord-widget h2 {
+            margin: 0;
+            font-size: clamp(2rem, 8vw, 3rem);
+        }
+
+        .discord-widget iframe {
+            width: 100%;
+            height: 420px;
+            display: block;
+            margin-top: 20px;
+            border: 0;
         }
 
         label {
@@ -206,8 +236,102 @@
             left: -9999px;
             opacity: 0
         }
+
+        @media(max-width:480px) {
+            .page {
+                width: min(100% - 24px, 620px);
+                padding-top: 25px
+            }
+
+            .signup {
+                margin-top: 32px;
+                padding: 18px 16px 5px
+            }
+
+            .signup h2 {
+                font-size: 2.15rem
+            }
+
+            .signup p {
+                margin: 7px 0 14px
+            }
+
+            .signup fieldset {
+                margin: 14px 0;
+                gap: 7px;
+                grid-template-columns: 1fr 1fr
+            }
+
+            .signup button {
+                padding: 12px
+            }
+        }
     </style>
-<script defer src="/analytics-consent.js"></script><style>#consent-banner{position:fixed;z-index:20;left:16px;right:16px;bottom:16px;max-width:760px;margin:auto;display:flex;gap:22px;align-items:center;justify-content:space-between;padding:17px 20px;background:#222820;color:#f6f0d5;border:1px solid #596052;box-shadow:5px 5px 0 #dc4b36;font:14px/1.4 Arial,sans-serif}#consent-banner p{margin:4px 0 0;color:#b5b6a7}#consent-banner a{color:#f4d63d}.consent-actions{display:flex;gap:8px;flex-shrink:0}.consent-actions button{padding:10px 12px;border:1px solid #f6f0d5;background:transparent;color:#f6f0d5}.consent-actions .consent-accept{background:#f4d63d;color:#222820;border-color:#f4d63d}@media(max-width:620px){#consent-banner{display:block}.consent-actions{margin-top:12px}.consent-actions button{width:50%}}</style></head>
+    <script defer src="/analytics-consent.js"></script>
+    <style>
+        #consent-banner {
+            position: fixed;
+            z-index: 20;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            max-width: 760px;
+            margin: auto;
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17px 20px;
+            background: #222820;
+            color: #f6f0d5;
+            border: 1px solid #596052;
+            box-shadow: 5px 5px 0 #dc4b36;
+            font: 14px/1.4 Arial, sans-serif
+        }
+
+        #consent-banner p {
+            margin: 4px 0 0;
+            color: #b5b6a7
+        }
+
+        #consent-banner a {
+            color: #f4d63d
+        }
+
+        .consent-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0
+        }
+
+        .consent-actions button {
+            padding: 10px 12px;
+            border: 1px solid #f6f0d5;
+            background: transparent;
+            color: #f6f0d5
+        }
+
+        .consent-actions .consent-accept {
+            background: #f4d63d;
+            color: #222820;
+            border-color: #f4d63d
+        }
+
+        @media(max-width:620px) {
+            #consent-banner {
+                display: block
+            }
+
+            .consent-actions {
+                margin-top: 12px
+            }
+
+            .consent-actions button {
+                width: 50%
+            }
+        }
+    </style>
+</head>
 
 <body>
     <main class="page">
@@ -216,7 +340,6 @@
             <p class="intro">One hit. New rules. You decide. Follow along for dev updates, gameplay, and the road to
                 launch.</p>
         </header>
-        <nav class="links" aria-label="GECK REKT social links"><a class="social" href="/i"><img src="/social/instagram.svg" alt=""><span><strong>Instagram</strong><span>Follow the world of GECK REKT</span></span></a><a class="social" href="https://discord.gg/P74dmxKdWR" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-mark">☁</span><span><strong>Discord</strong><span>Join the GECK REKT community</span></span></a><a class="social" href="/y"><img src="/social/youtube.svg" alt=""><span><strong>YouTube</strong><span>Watch the latest gameplay</span></span></a><a class="social" href="/t"><img src="/social/tiktok.svg" alt=""><span><strong>TikTok</strong><span>Short clips and chaotic moments</span></span></a><a class="social" href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-mark">𝕏</span><span><strong>X</strong><span>Follow GECK REKT on X</span></span></a><a class="social" href="/" rel="home"><span aria-hidden="true" class="social-mark">⌂</span><span><strong>Website</strong><span>Visit the main GECK REKT site</span></span></a></nav>
         <section class="signup">
             <h2>Stay in the match.</h2>
             <p>Get only the GECK REKT news you care about.</p>
@@ -232,19 +355,28 @@
                             type="checkbox" name="lists_28[]" value="8">Development updates</label>
                 </fieldset><input class="honeypot" name="email_address_check" tabindex="-1"><input type="hidden"
                     name="locale" value="en"><button type="submit">Join the list &rarr;</button>
-                <p class="note">Double opt-in. Unsubscribe or update your preferences any time.</p>
+                <!-- <p class="note">Double opt-in. Unsubscribe or update your preferences any time.</p> -->
             </form>
-        </section><a class="back" href="/"> Back to the main site</a>
+        </section>
+        <nav class="links" aria-label="GECK REKT social links"><a class="social" href="/i"><img
+                    src="/social/instagram.svg" alt=""><span><strong>Instagram</strong><span>Follow the world of GECK
+                        REKT</span></span></a><a class="social" href="https://discord.gg/P74dmxKdWR" target="_blank"
+                rel="noopener noreferrer"><img src="/social/discord.svg" alt=""><span><strong>Discord</strong><span>Join
+                        the GECK REKT community</span></span></a><a class="social" href="/y"><img
+                    src="/social/youtube.svg" alt=""><span><strong>YouTube</strong><span>Watch the latest
+                        gameplay</span></span></a><a class="social" href="/t"><img src="/social/tiktok.svg"
+                    alt=""><span><strong>TikTok</strong><span>Short clips and chaotic moments</span></span></a><a
+                class="social" href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer"><img
+                    src="/social/x.svg" alt=""><span><strong>X</strong><span>Follow GECK REKT on X</span></span></a><a
+                class="social" href="/" rel="home"><img src="/social/website.svg"
+                    alt=""><span><strong>Website</strong><span>Visit the main GECK REKT site</span></span></a></nav><a
+            class="back" href="/"> Back to the main site</a>
         <footer>&copy; 2026 GECK REKT</footer>
     </main>
-<script>if(new URLSearchParams(location.search).get("source")==="qr"){geckrektAnalytics.event("event","qr_scan",{location:"join"});}</script></body>
+    <script>if (new URLSearchParams(location.search).get("source") === "qr") { geckrektAnalytics.event("event", "qr_scan", { location: "join" }); }</script>
+</body>
 
 </html>
-
-
-
-
-
 
 
 
