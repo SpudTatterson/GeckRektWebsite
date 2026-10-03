@@ -165,6 +165,9 @@
         <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on YouTube" @click="trackSocial('youtube')"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
         <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Instagram" @click="trackSocial('instagram')"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
         <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on TikTok" @click="trackSocial('tiktok')"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
+        <a href="https://discord.gg/P74dmxKdWR" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Discord" @click="trackSocial('discord')"><img src="/social/discord.svg" alt=""><span class="sr-only">Discord</span></a>
+        <a href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on X" @click="trackSocial('x')"><img src="/social/x.svg" alt=""><span class="sr-only">X</span></a>
+        <a href="/" aria-label="GECK REKT website" @click="trackSocial('website')"><img src="/social/website.svg" alt=""><span class="sr-only">Website</span></a>
       </nav>
       <p>© {{ currentYear }} GECK REKT. All rights reserved.</p>
     </footer>
@@ -383,7 +386,7 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
 }
 
 @media (max-width: 620px) {
-  nav a:not(.nav-cta) { display: none; }
+  .game-header nav { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
   .hero-art { width: 104vw; margin-left: -8vw; }
   .hero-logo { width: 100%; margin-top: 20px; border-radius: 0; box-shadow: none; }
   .eyebrow { line-height: 1.35; }
