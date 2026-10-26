@@ -4,19 +4,19 @@ module.exports = {
       entry: 'src/geck-rekt/main.ts',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'GECK REKT — Coming Soon'
+      title: 'Geck REKT | Multiplayer Party Game with Guns & Tongues'
     },
     checkEmail: {
       entry: 'src/geck-rekt/confirmation.ts',
       template: 'public/confirmation.html',
       filename: 'check-email/index.html',
-      title: 'Check Your Email — GECK REKT'
+      title: 'Check Your Email — Geck REKT'
     },
     confirmed: {
       entry: 'src/geck-rekt/confirmation.ts',
       template: 'public/confirmation.html',
       filename: 'confirmed/index.html',
-      title: 'You’re In — GECK REKT'
+      title: 'You’re In — Geck REKT'
     }
   }
 }

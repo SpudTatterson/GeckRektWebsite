@@ -1,9 +1,9 @@
 <template>
   <div class="game-page" id="top">
     <header class="game-header">
-      <a class="wordmark" href="#top" aria-label="Geck Rekt home">
+      <a class="wordmark" href="#top" aria-label="Geck REKT home">
         <img src="/geck-rekt/LogoBox.png" alt="">
-        <span>GECK REKT</span>
+        <span>Geck REKT</span>
       </a>
       <nav aria-label="Page navigation">
         <a href="#about">About</a>
@@ -16,21 +16,21 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span></span>One hit. New rules. You decide.</p>
-          <h1 id="hero-title" class="sr-only">GECK REKT</h1>
-          <img class="hero-logo" src="/geck-rekt/LogoWide.png" alt="GECK REKT">
-          <p class="hero-line">Pull the trigger. Change the game.</p>
+          <h1 id="hero-title" class="sr-only">Geck REKT</h1>
+          <img class="hero-logo" src="/geck-rekt/LogoWide.png" alt="Geck REKT">
+          <p class="hero-line">Guns, Tongues &amp; Glory.</p>
           <p class="hero-description">
-            A fast paced, stylized multiplayer party shooter where every hit kills
-            and every match evolves. Every few rounds, the whole lobby votes on a
-            modifier that changes the rules, so no two games play the same.
+            Geck REKT is a multiplayer party game starring heavily armed Gecks. One shot
+            can end your round. Your tongue can disarm rivals, grab them, and fling them
+            across the arena. Every few rounds, the whole lobby votes to change the rules.
           </p>
           <div class="platform-line" aria-label="Planned platforms">
             <span>Coming first to <strong>Steam</strong></span>
             <span>Consoles planned later</span>
           </div>
           <div class="hero-actions">
-            <a class="button" href="#updates">Keep me posted <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#media">See what’s coming ↓</a>
+            <a class="button" href="#updates">Get updates <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#media">Watch gameplay ↓</a>
           </div>
         </div>
 
@@ -41,7 +41,7 @@
             loop
             playsinline
             poster="/geck-rekt/Voting_Stage.png"
-            aria-label="GECK REKT gameplay featuring a one-hit kill"
+            aria-label="Geck REKT gameplay featuring a one-hit kill"
             :class="{ 'focus-bottom': heroVideoFocusBottom }"
             @timeupdate="updateHeroVideoFocus"
           >
@@ -53,13 +53,13 @@
       </section>
 
       <div class="status-strip" aria-label="Game status">
-        <span>In development</span><i>✦</i><span>First look coming soon</span><i>✦</i><span>In development</span>
+        <span>In development</span><i>✦</i><span>Gameplay revealed</span><i>✦</i><span>In development</span>
       </div>
 
       <section class="about section" id="about">
         <div class="section-label">01 / About</div>
         <div class="about-copy">
-          <p class="kicker">Cute faces. Wild weapons. Zero hit points.</p>
+          <p class="kicker">Cute faces. Wild weapons. One hit. You’re out.</p>
           <h2>Vote. Adapt.<br>Wreck.</h2>
           <p>
             Bright arenas and colorful characters collide with lethal
@@ -67,16 +67,9 @@
             combat, the whole lobby votes on what happens next.
           </p>
           <p>
-            Fewer weapon spawns? Exploding dead players? The players decide, then everyone
-            has to survive the consequences. Learn the new rules fast, or get rekt.
+            Meteor showers? Only rocket launchers? Exploding bodies? The whole lobby votes
+            on the next twist, then everyone has to survive it. Learn the new rules fast, or get rekt.
           </p>
-          <div class="tongue-callout">
-            <strong>Weaponize your tongue.</strong>
-            <p>
-              Land a lick to make an enemy drop their weapon, snatch them and fling
-              them across the map, or launch rocks, barrels, and anything else in reach.
-            </p>
-          </div>
           <p>
             Pick your Geck and make it your own. Character customization is planned
             for the full release, with hats, skin colors, and more ways to stand out
@@ -85,13 +78,47 @@
         </div>
         <aside class="status-card">
           <p class="card-label">Game details</p>
-          <div><span>Genre</span><strong>Party shooter</strong></div>
+          <div><span>Genre</span><strong>Party game</strong></div>
           <div><span>Combat</span><strong>One-hit kills</strong></div>
           <div><span>Tongue</span><strong>Disarm, grab &amp; fling</strong></div>
           <div><span>Customization</span><strong>Planned</strong></div>
           <div><span>Launch platform</span><strong>Steam</strong></div>
           <small>Console versions are planned for the future.</small>
         </aside>
+      </section>
+
+      <section class="gameplay-features section" aria-label="Gameplay features">
+        <article class="gameplay-feature">
+          <div class="gameplay-copy">
+            <h2>Weaponize your tongue.</h2>
+            <p>They grabbed the gun first? You’re still in the fight. Disarm them with a lick
+            and fling them across the arena. A Geck is never out of tricks.</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT tongue combat in a tropical island arena">
+              <source src="/geck-rekt/TongueKill.webm" type="video/webm">
+              <a href="/geck-rekt/TongueKill.webm">Watch the tongue combat clip</a>
+            </video>
+            <figcaption>Tongue combat <span>Work in progress</span></figcaption>
+          </figure>
+        </article>
+        <article class="gameplay-feature gameplay-feature-reverse">
+          <div class="gameplay-copy">
+            <h2>Make the arena your arsenal.</h2>
+            <p>Grab rocks and barrels with your tongue and send them flying.
+              Your next weapon could be sitting right beside you.</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT gameplay showing a barrel elimination">
+              <source src="/geck-rekt/BarrleKill.webm" type="video/webm">
+              <source src="/geck-rekt/BarrleKill.mp4" type="video/mp4">
+              <a href="/geck-rekt/BarrleKill.webm">Watch the barrel gameplay clip</a>
+            </video>
+            <figcaption>Barrel elimination <span>Work in progress</span></figcaption>
+          </figure>
+        </article>
       </section>
 
       <section class="media section" id="media">
@@ -104,7 +131,7 @@
             <div class="video-embed">
               <iframe
                 src="https://www.youtube-nocookie.com/embed/fKN2s1GXaAs?rel=0"
-                title="GECK REKT gameplay footage"
+                title="Geck REKT gameplay footage"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
@@ -139,7 +166,7 @@
           data-type="subscription"
           @submit="validateSignup"
         >
-          <label for="email">Get only the GECK REKT news you care about.</label>
+          <label for="email">Get only the Geck REKT news you care about.</label>
           <div class="input-row">
             <input id="email" v-model="email" type="email" name="EMAIL" autocomplete="email" placeholder="YOUR EMAIL ADDRESS" required>
           </div>
@@ -160,16 +187,16 @@
     </main>
 
     <footer>
-      <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>GECK REKT</span></span>
-      <nav class="social-links" aria-label="GECK REKT social media">
-        <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on YouTube" @click="trackSocial('youtube')"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
-        <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Instagram" @click="trackSocial('instagram')"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
-        <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on TikTok" @click="trackSocial('tiktok')"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
-        <a href="https://discord.gg/P74dmxKdWR" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on Discord" @click="trackSocial('discord')"><img src="/social/discord.svg" alt=""><span class="sr-only">Discord</span></a>
-        <a href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer" aria-label="GECK REKT on X" @click="trackSocial('x')"><img src="/social/x.svg" alt=""><span class="sr-only">X</span></a>
-        <a href="/" aria-label="GECK REKT website" @click="trackSocial('website')"><img src="/social/website.svg" alt=""><span class="sr-only">Website</span></a>
+      <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>Geck REKT</span></span>
+      <nav class="social-links" aria-label="Geck REKT social media">
+        <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on YouTube" @click="trackSocial('youtube')"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
+        <a href="/i" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on Instagram" @click="trackSocial('instagram')"><img src="/social/instagram.svg" alt=""><span class="sr-only">Instagram</span></a>
+        <a href="/t" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on TikTok" @click="trackSocial('tiktok')"><img src="/social/tiktok.svg" alt=""><span class="sr-only">TikTok</span></a>
+        <a href="https://discord.gg/P74dmxKdWR" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on Discord" @click="trackSocial('discord')"><img src="/social/discord.svg" alt=""><span class="sr-only">Discord</span></a>
+        <a href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on X" @click="trackSocial('x')"><img src="/social/x.svg" alt=""><span class="sr-only">X</span></a>
+        <a href="/" aria-label="Geck REKT website" @click="trackSocial('website')"><img src="/social/website.svg" alt=""><span class="sr-only">Website</span></a>
       </nav>
-      <p>© {{ currentYear }} GECK REKT. All rights reserved.</p>
+      <p>© {{ currentYear }} Geck REKT. All rights reserved.</p>
     </footer>
   </div>
 </template>
@@ -216,7 +243,7 @@ export default Vue.extend({
 <style lang="less">
 @import '../css/variables.less';
 
-// Standalone GECK REKT landing-page palette.
+// Standalone Geck REKT landing-page palette.
 @bodyBgColor: #131713;
 @contentBgColor: #222820;
 @textColor: #f6f0d5;
@@ -318,14 +345,24 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .kicker { color: @accentColor; margin: 0 0 24px; }
 .about h2, .media h2, .updates h2 { font-size: clamp(3.2rem, 6vw, 6.2rem); }
 .about-copy > p:not(.kicker) { color: fade(@textColor, 72%); max-width: 640px; font-size: .98rem; }
-.tongue-callout { max-width: 640px; margin: 32px 0 38px; padding: 22px 24px; border: 2px solid @accentColor; background: @highlightColor; color: white; transform: rotate(-3deg); box-shadow: 8px 9px 0 @bodyBgColor; }
-.tongue-callout strong { display: block; font-family: 'Lilita One', 'Roboto', sans-serif; font-size: 1.7rem; font-weight: 400; line-height: 1; letter-spacing: .01em; text-transform: uppercase; }
-.tongue-callout p { margin: 12px 0 0; font-size: .9rem; line-height: 1.55; }
 .status-card { padding: 26px; border: 1px solid fade(@textColor, 18%); background: fade(@bodyBgColor, 22%); transform: rotate(3deg); }
 .card-label { color: fade(@textColor, 58%); margin: 0 0 20px; }
 .status-card > div { padding: 10px 0; display: flex; justify-content: space-between; border-bottom: 1px solid fade(@textColor, 14%); font-size: .82rem; }
 .status-card strong { color: @accentColor; text-transform: uppercase; font-size: .68rem; }
 .status-card small { display: block; margin-top: 22px; color: fade(@textColor, 55%); line-height: 1.5; }
+
+.gameplay-features { padding-top: 0; }
+.gameplay-feature { display: grid; grid-template-columns: .8fr 1.2fr; gap: 5vw; align-items: center; }
+.gameplay-feature + .gameplay-feature { margin-top: 100px; }
+.gameplay-feature-reverse { grid-template-columns: 1.2fr .8fr; }
+.gameplay-feature-reverse .gameplay-copy { order: 2; }
+.gameplay-copy { min-width: 0; padding: 26px 28px; border: 2px solid @accentColor; background: @highlightColor; color: white; transform: rotate(-3deg); box-shadow: 8px 9px 0 @bodyBgColor; }
+.gameplay-copy h2 { font-size: clamp(1.7rem, 2.5vw, 2.3rem); line-height: 1.05; letter-spacing: .01em; }
+.gameplay-copy > p:last-child { margin: 14px 0 0; color: white; font-size: .98rem; line-height: 1.55; max-width: 540px; }
+.gameplay-clip { min-width: 0; margin: 0; padding: 10px; background: @bodyBgColor; border: 1px solid fade(@textColor, 18%); box-shadow: 8px 8px 0 fade(@bodyBgColor, 45%); }
+.gameplay-clip img, .gameplay-clip video { display: block; width: 100%; height: auto; }
+.gameplay-clip figcaption { padding: 10px 4px 2px; font-size: .78rem; font-weight: 700; }
+.gameplay-clip figcaption span { margin-left: 8px; color: fade(@textColor, 52%); font-size: .72rem; font-weight: 400; }
 
 .media { border-top: 1px solid fade(@textColor, 14%); }
 .section-heading { margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-start; }
@@ -379,6 +416,9 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
   .hero-copy { width: 100%; }
   .hero-logo { margin-top: 24px; }
   .about { grid-template-columns: 1fr; }
+  .gameplay-feature, .gameplay-feature-reverse { grid-template-columns: 1fr; gap: 24px; }
+  .gameplay-feature-reverse .gameplay-copy { order: 0; }
+  .gameplay-feature + .gameplay-feature { margin-top: 64px; }
   .status-card { max-width: 520px; }
   .media-grid { grid-template-columns: 1fr 1fr; }
   .feature { grid-column: span 2; }
@@ -393,6 +433,7 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .status-strip span:last-child, .status-strip i:last-of-type { display: none; }
   .section { padding: 90px 0; }
+  .gameplay-features { padding-top: 0; }
   .section-heading { display: block; }
   .section-heading .section-label { margin-bottom: 30px; }
   .media-grid { display: block; }
