@@ -45,7 +45,7 @@
             :class="{ 'focus-bottom': heroVideoFocusBottom }"
             @timeupdate="updateHeroVideoFocus"
           >
-            <source src="/geck-rekt/Kill.mp4" type="video/mp4">
+            <source src="/geck-rekt/Kill.webm" type="video/webm">
           </video>
           <span class="sticker" aria-hidden="true">IN<br>DEV</span>
           <span class="image-tag">ONE HIT. ONE KILL.</span>
