@@ -114,11 +114,11 @@
             <p>Gameplay footage <em>Work in progress</em></p>
           </article>
           <article class="media-card">
-            <img class="media-image" src="/geck-rekt/Forest_Map.png" alt="Three Gecks battling in a forest arena">
+            <img class="media-image" src="/geck-rekt/Forest_Map.jpg" alt="Three Gecks battling in a forest arena">
             <p>Forest arena <em>Fight among the ruins</em></p>
           </article>
           <article class="media-card">
-            <img class="media-image" src="/geck-rekt/Island_Map.png" alt="Three Gecks battling on a tropical island arena">
+            <img class="media-image" src="/geck-rekt/Island_Map.jpg" alt="Three Gecks battling on a tropical island arena">
             <p>Island arena <em>Watch your step</em></p>
           </article>
         </div>
