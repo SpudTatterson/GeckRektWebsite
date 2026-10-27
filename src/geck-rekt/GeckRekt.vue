@@ -90,6 +90,52 @@
       <section class="gameplay-features section" aria-label="Gameplay features">
         <article class="gameplay-feature">
           <div class="gameplay-copy">
+            <h2>Same couch. Or miles apart.</h2>
+            <p>Bring 2–4 players together for couch or online multiplayer. Steal their
+              guns, settle your disagreements, and give your friends something to shout about.</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT gameplay showing four Gecks fighting in a forest arena">
+              <source src="/geck-rekt/ForestFight.webm" type="video/webm">
+              <a href="/geck-rekt/ForestFight.webm">Watch the four-player forest fight</a>
+            </video>
+            <figcaption>2–4 players <span>Couch and online multiplayer</span></figcaption>
+          </figure>
+        </article>
+        <article class="gameplay-feature gameplay-feature-reverse">
+          <div class="gameplay-copy">
+            <h2>Change the rules. Survive the consequences.</h2>
+            <p>Every few rounds, vote on modifiers that shake up the fight. Meteor showers,
+              exploding bodies, or nothing but rocket launchers. Pick your next problem
+              and adapt fast, or get rekt.</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT gameplay showing a Meteor Shower vote followed by meteors hitting players">
+              <source src="/geck-rekt/MeteorShowerVoteConsequenes.webm" type="video/webm">
+              <a href="/geck-rekt/MeteorShowerVoteConsequenes.webm">Watch the Meteor Shower modifier clip</a>
+            </video>
+            <figcaption>Meteor Shower modifier <span>Work in progress</span></figcaption>
+          </figure>
+        </article>
+        <article class="gameplay-feature">
+          <div class="gameplay-copy">
+            <h2>Win them over. Literally.</h2>
+            <p>Your friends voted for something else? Pull them onto your choice with
+              your tongue. Democracy takes a little persuasion.</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT voting gameplay showing a Geck pulling a friend onto their choice">
+              <source src="/geck-rekt/VoteDisagreement.webm" type="video/webm">
+              <a href="/geck-rekt/VoteDisagreement.webm">Watch the voting disagreement clip</a>
+            </video>
+            <figcaption>Voting disagreement <span>Work in progress</span></figcaption>
+          </figure>
+        </article>
+        <article class="gameplay-feature gameplay-feature-reverse">
+          <div class="gameplay-copy">
             <h2>Weaponize your tongue.</h2>
             <p>They grabbed the gun first? You’re still in the fight. Disarm them with a lick
             and fling them across the arena. A Geck is never out of tricks.</p>
@@ -101,6 +147,21 @@
               <a href="/geck-rekt/TongueKill.webm">Watch the tongue combat clip</a>
             </video>
             <figcaption>Tongue combat <span>Work in progress</span></figcaption>
+          </figure>
+        </article>
+        <article class="gameplay-feature">
+          <div class="gameplay-copy">
+            <h2>Out of bullets? No worries.</h2>
+            <p>Throw your gun at your friend and steal theirs. Who needs a reload
+              when someone else brought the ammo?</p>
+          </div>
+          <figure class="gameplay-clip">
+            <video autoplay muted loop playsinline controls preload="metadata"
+              aria-label="Geck REKT gameplay showing an elimination with a thrown gun">
+              <source src="/geck-rekt/ThrowKill.webm" type="video/webm">
+              <a href="/geck-rekt/ThrowKill.webm">Watch the gun throw gameplay clip</a>
+            </video>
+            <figcaption>Gun throw elimination <span>Work in progress</span></figcaption>
           </figure>
         </article>
         <article class="gameplay-feature gameplay-feature-reverse">
@@ -357,6 +418,7 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .gameplay-feature-reverse { grid-template-columns: 1.2fr .8fr; }
 .gameplay-feature-reverse .gameplay-copy { order: 2; }
 .gameplay-copy { min-width: 0; padding: 26px 28px; border: 2px solid @accentColor; background: @highlightColor; color: white; transform: rotate(-3deg); box-shadow: 8px 9px 0 @bodyBgColor; }
+.gameplay-feature:nth-child(even) .gameplay-copy { transform: rotate(3deg); }
 .gameplay-copy h2 { font-size: clamp(1.7rem, 2.5vw, 2.3rem); line-height: 1.05; letter-spacing: .01em; }
 .gameplay-copy > p:last-child { margin: 14px 0 0; color: white; font-size: .98rem; line-height: 1.55; max-width: 540px; }
 .gameplay-clip { min-width: 0; margin: 0; padding: 10px; background: @bodyBgColor; border: 1px solid fade(@textColor, 18%); box-shadow: 8px 8px 0 fade(@bodyBgColor, 45%); }
