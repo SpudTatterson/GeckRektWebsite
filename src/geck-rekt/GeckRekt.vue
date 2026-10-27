@@ -8,6 +8,7 @@
       <nav aria-label="Page navigation">
         <a href="#about">About</a>
         <a href="#media">Media</a>
+        <a href="#community">Community</a>
         <a class="nav-cta" href="#updates">Get updates</a>
       </nav>
     </header>
@@ -212,6 +213,30 @@
         </div>
       </section>
 
+      <section class="community section" id="community" aria-labelledby="community-title">
+        <div class="section-heading">
+          <div class="section-label">03 / Community</div>
+          <h2 id="community-title">Join the chaos.</h2>
+        </div>
+        <p class="community-intro">Find your next rivals on Discord, catch the latest gameplay, and follow what’s coming to Geck REKT.</p>
+        <nav class="community-links" aria-label="Follow Geck REKT">
+          <a class="community-link community-discord" href="https://discord.gg/P74dmxKdWR" target="_blank" rel="noopener noreferrer" @click="trackSocial('discord', 'community')">
+            <img src="/social/discord.svg" alt=""><span><strong>Discord</strong><small>Meet the community</small></span><span class="community-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="community-link" href="/y" target="_blank" rel="noopener noreferrer" @click="trackSocial('youtube', 'community')">
+            <img src="/social/youtube.svg" alt=""><span><strong>YouTube</strong><small>Watch the gameplay</small></span><span class="community-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="community-link" href="/i" target="_blank" rel="noopener noreferrer" @click="trackSocial('instagram', 'community')">
+            <img src="/social/instagram.svg" alt=""><span><strong>Instagram</strong><small>Follow the highlights</small></span><span class="community-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="community-link" href="/t" target="_blank" rel="noopener noreferrer" @click="trackSocial('tiktok', 'community')">
+            <img src="/social/tiktok.svg" alt=""><span><strong>TikTok</strong><small>Catch the chaos</small></span><span class="community-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="community-link" href="https://x.com/GeckREKT" target="_blank" rel="noopener noreferrer" @click="trackSocial('x', 'community')">
+            <img src="/social/x.svg" alt=""><span><strong>X</strong><small>Keep up with Geck REKT</small></span><span class="community-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </section>
       <section class="updates" id="updates">
         <div>
           <p class="kicker">Choose what reaches your inbox.</p>
@@ -293,9 +318,9 @@ export default Vue.extend({
       this.formState = 'success'
       this.formMessage = 'Confirmation opened in a new tab. Check your inbox next to complete your subscription.'
     },
-    trackSocial(network: string) {
+    trackSocial(network: string, location = 'footer') {
       const analytics = (window as any).gtag
-      if (analytics) analytics('event', 'social_click', { network, location: 'footer' })
+      if (analytics) analytics('event', 'social_click', { network, location })
     }
   }
 })
@@ -446,6 +471,18 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .media-card p { margin: 12px 0 0; font-weight: 700; font-size: .82rem; }
 .media-card em { margin-left: 7px; color: fade(@textColor, 52%); font-style: normal; font-weight: 400; font-size: .72rem; }
 
+.community { border-top: 1px solid fade(@textColor, 14%); }
+.community h2 { font-size: clamp(3.2rem, 6vw, 6.2rem); }
+.community .section-heading { margin-bottom: 26px; }
+.community-intro { max-width: 650px; margin: 0 0 36px; color: fade(@textColor, 72%); font-size: 1rem; }
+.community-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.community-link { display: flex; align-items: center; gap: 18px; padding: 24px; border: 1px solid fade(@textColor, 25%); background: @bodyBgColor; text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+.community-link img { width: 30px; height: 30px; flex-shrink: 0; }
+.community-link strong { display: block; font-size: 1.1rem; }
+.community-link small { display: block; margin-top: 4px; color: fade(@textColor, 65%); font-size: .8rem; }
+.community-arrow { margin-left: auto; color: @accentColor; }
+.community-discord { border-color: @accentColor; }
+.community-link:hover, .community-link:focus-visible { border-color: @accentColor; transform: translateY(-4px); }
 .updates { padding: 100px ~"max(4vw, calc((100vw - 1200px) / 2))"; display: grid; grid-template-columns: 1fr .9fr; gap: 8vw; align-items: end; background: @highlightColor; color: white; }
 .updates .kicker { color: white; }
 .signup > label { display: block; margin-bottom: 16px; font-size: .98rem; font-weight: 600; }
@@ -478,6 +515,7 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
   .hero-copy { width: 100%; }
   .hero-logo { margin-top: 24px; }
   .about { grid-template-columns: 1fr; }
+  .community-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gameplay-feature, .gameplay-feature-reverse { grid-template-columns: 1fr; gap: 24px; }
   .gameplay-feature-reverse .gameplay-copy { order: 0; }
   .gameplay-feature + .gameplay-feature { margin-top: 64px; }
@@ -500,6 +538,7 @@ footer { min-height: 115px; color: fade(@textColor, 56%); font-size: .68rem; }
   .section-heading .section-label { margin-bottom: 30px; }
   .media-grid { display: block; }
   .media-card { margin-bottom: 34px; }
+  .community-links { grid-template-columns: 1fr; }
   .signup fieldset { grid-template-columns: 1fr; }
   footer { padding: 34px 0; flex-direction: column; gap: 14px; text-align: center; }
   footer .social-links { display: flex; order: 2; }
