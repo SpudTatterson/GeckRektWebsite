@@ -204,13 +204,17 @@
             <p>Gameplay footage <em>Work in progress</em></p>
           </article>
           <article class="media-card">
-            <img class="media-image" src="/geck-rekt/Forest_Map.jpg" alt="Three Gecks battling in a forest arena">
+            <a href="/press/assets/Forsest4PlayerFight.webp" target="_blank" rel="noopener noreferrer"><img class="media-image" src="/press/assets/Forsest4PlayerFight.webp" alt="Four Gecks battling among the forest arena ruins" loading="lazy"></a>
             <p>Forest arena <em>Fight among the ruins</em></p>
           </article>
           <article class="media-card">
-            <img class="media-image" src="/geck-rekt/Island_Map.jpg" alt="Three Gecks battling on a tropical island arena">
-            <p>Island arena <em>Watch your step</em></p>
+            <a href="/press/assets/rocket-kill-tongue-punch.webp" target="_blank" rel="noopener noreferrer"><img class="media-image" src="/press/assets/rocket-kill-tongue-punch.webp" alt="A rocket explosion and tongue punch during an island arena fight" loading="lazy"></a>
+            <p>Rockets &amp; tongues <em>Double the trouble</em></p>
           </article>
+        </div>
+        <div class="press-kit-callout">
+          <div><p class="kicker">Press &amp; creators</p><p>Get screenshots, gameplay footage, logos, and music for your coverage.</p></div>
+          <a class="button" href="/press/">Open press kit</a>
         </div>
       </section>
 
@@ -452,6 +456,10 @@ nav a { text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
 .gameplay-clip img, .gameplay-clip video { display: block; width: 100%; height: auto; }
 .gameplay-clip figcaption { padding: 10px 4px 2px; font-size: .78rem; font-weight: 700; }
 .gameplay-clip figcaption span { margin-left: 8px; color: fade(@textColor, 52%); font-size: .72rem; font-weight: 400; }
+
+.press-kit-callout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; margin-top: 36px; padding: 28px; border: 1px solid fade(@textColor, 22%); }
+.press-kit-callout p { margin: 0; }
+.press-kit-callout .kicker { margin-bottom: 8px; }
 
 .media { border-top: 1px solid fade(@textColor, 14%); }
 .section-heading { margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-start; }
