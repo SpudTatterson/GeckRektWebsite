@@ -16,3 +16,5 @@
 .screens .meteor-closeup{overflow:hidden;aspect-ratio:16/9}.screens .meteor-closeup img{transform:scale(2.2);transform-origin:90% 42%}
 
 .long-description{margin-top:12px}.long-description h3{margin-bottom:18px}.long-description p{max-width:740px}
+
+.download-overview{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}.download-overview .download-shortcuts{align-content:start}.kit-contents{border-left:1px solid #ffffff25;padding-left:28px}.kit-contents h3{font-size:20px;margin-bottom:12px}.kit-contents ul{padding-left:18px;margin:0;font-size:15px;color:var(--muted)}.kit-contents li+li{margin-top:8px}.kit-contents strong{color:var(--text)}@media(max-width:800px){.download-overview{grid-template-columns:1fr;gap:24px}.kit-contents{border-left:0;border-top:1px solid #ffffff25;padding-left:0;padding-top:20px}}
