@@ -9,6 +9,7 @@
         <a href="#about">About</a>
         <a href="#media">Media</a>
         <a href="#community">Community</a>
+        <a href="/press/">Press kit</a>
         <a class="nav-cta" href="#updates">Get updates</a>
       </nav>
     </header>
@@ -273,6 +274,7 @@
     </main>
 
     <footer>
+      <a href="/press/">Press kit</a>
       <span class="wordmark"><img src="/geck-rekt/LogoBox.png" alt=""><span>Geck REKT</span></span>
       <nav class="social-links" aria-label="Geck REKT social media">
         <a href="/y" target="_blank" rel="noopener noreferrer" aria-label="Geck REKT on YouTube" @click="trackSocial('youtube')"><img src="/social/youtube.svg" alt=""><span class="sr-only">YouTube</span></a>
