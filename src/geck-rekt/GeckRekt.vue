@@ -19,7 +19,7 @@
         <div class="hero-copy">
           <p class="eyebrow"><span></span>One hit. New rules. You decide.</p>
           <h1 id="hero-title" class="sr-only">Geck REKT</h1>
-          <img class="hero-logo" src="/geck-rekt/LogoWide.png" alt="Geck REKT">
+          <img class="hero-logo" src="/geck-rekt/LogoWide.png?v=ef7d11b3effd" alt="Geck REKT">
           <p class="hero-line">Guns, Tongues &amp; Glory.</p>
           <p class="hero-description">
             Geck REKT is a multiplayer party game starring heavily armed Gecks. One shot
