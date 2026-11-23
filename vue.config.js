@@ -10,13 +10,13 @@ module.exports = {
       entry: 'src/geck-rekt/confirmation.ts',
       template: 'public/confirmation.html',
       filename: 'check-email/index.html',
-      title: 'Check Your Email — Geck REKT'
+      title: 'Check Your Email: Geck REKT'
     },
     confirmed: {
       entry: 'src/geck-rekt/confirmation.ts',
       template: 'public/confirmation.html',
       filename: 'confirmed/index.html',
-      title: 'You’re In — Geck REKT'
+      title: 'You’re In: Geck REKT'
     }
   }
 }
